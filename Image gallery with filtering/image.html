@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image gallery with filtering</title>
+    <link rel="stylesheet" href="image.css">
+</head>
+<body>
+    <div class="full-img" id="fullImgBox">
+        <img src="image/eurasian-wigeon1-4914971_1920.jpg" id="fullImg">
+        <span onclick="closeFullImg()">X</span>
+    </div>
+    <div class="img-gallery">
+        <img src="image/eurasian-wigeon1-4914971_1920.jpg"onclick="openFullImg(this.src)">
+        <img src="image/laughing-kookaburra2-8203625_1920.jpg"onclick="openFullImg(this.src)" >
+        <img src="image/mountains3-100367_1920.jpg" onclick="openFullImg(this.src)">
+        <img src="image/mountains4-7867137_1920.jpg"onclick="openFullImg(this.src)" >
+        <img src="image/sunset5-815270_1920.jpg"onclick="openFullImg(this.src)">
+        <img src="image/sunset6-1807524_1920.jpg"onclick="openFullImg(this.src)">
+        <img src="image/tree7-736885_1280.jpg"onclick="openFullImg(this.src)">
+        <img src="image/wolf8-8199785_1920.png"onclick="openFullImg(this.src)">
+    </div>
+    <script>
+        var fullImgBox =document.getElementById("fullImgBox");
+        var fullImg =document.getElementById("fullImg");
+        function openFullImg(pic){
+            fullImgBox.style.display="flex";
+            fullImg.src=pic;
+        }
+        function closeFullImg(){
+            fullImgBox.style.display="none";
+        }
+    </script>
+</body>
+</html>
